@@ -50,14 +50,14 @@ function calcularChurrasco() {
 // Calculo para quantidade de carvão
     const carvao = (totalCarneHomens + totalCarneMulheres + totalCarneCriancas +
     totalFrangoHomens + totalFrangoMulheres + totalFrangoCriancas +
-    totalLinguicaHomens + totalLinguicaMulheres + totalLinguicaCriancas) * 1.5;
+    totalLinguicaHomens + totalLinguicaMulheres + totalLinguicaCriancas).toFixed(3) * 1.5;
   
   
     const resultado = `
       <h2>Quantidade para Comprar:</h2>
-      <p>Carne Bovina: ${totalCarneHomens + totalCarneMulheres + totalCarneCriancas}Kg</p>
-      <p>Frango: ${totalFrangoHomens + totalFrangoMulheres + totalFrangoCriancas}Kg</p>
-      <p>Linguiça: ${totalLinguicaHomens + totalLinguicaMulheres + totalLinguicaCriancas}Kg</p>
+      <p>Carne Bovina: ${(totalCarneHomens + totalCarneMulheres + totalCarneCriancas).toFixed(3)}Kg</p>
+      <p>Frango: ${(totalFrangoHomens + totalFrangoMulheres + totalFrangoCriancas).toFixed(3)}Kg</p>
+      <p>Linguiça: ${(totalLinguicaHomens + totalLinguicaMulheres + totalLinguicaCriancas).toFixed(3)}Kg</p>
       <p>Carvão: ${carvao}g</p>
       <p>Cerveja: ${totalCervejas}L<br />
       ${lata473} Latas de 473ml<br />
