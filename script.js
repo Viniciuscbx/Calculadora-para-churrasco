@@ -26,20 +26,20 @@ function calcularChurrasco() {
     const totalCarneCriancas = (numCriancas * carneMulher).toFixed(3);
 
 // Calculo para frango
-    const totalFrangoHomens = numHomens * frangoHomem;
-    const totalFrangoMulheres = numMulheres * frangoMulher;
-    const totalFrangoCriancas = numCriancas * frangoMulher;
+    const totalFrangoHomens = numHomens * frangoHomem.toFixed(3);
+    const totalFrangoMulheres = numMulheres * frangoMulher.toFixed(3);
+    const totalFrangoCriancas = numCriancas * frangoMulher.toFixed(3);
 
 // Calculo para linguiça
-    const totalLinguicaHomens = numHomens * linguiçaHomem;
-    const totalLinguicaMulheres = numMulheres * linguiçaMulher;
-    const totalLinguicaCriancas = numCriancas * linguiçaMulher;
+    const totalLinguicaHomens = numHomens * linguiçaHomem.toFixed(3);
+    const totalLinguicaMulheres = numMulheres * linguiçaMulher.toFixed(3);
+    const totalLinguicaCriancas = numCriancas * linguiçaMulher.toFixed(3);
 
 // calculo para bebidas
     const totalCervejas = adultosQueBebem * 1.750;
-    const lata473 = totalCervejas / 473;
-    const lata350 = totalCervejas / 350;
-    const lata269 = totalCervejas / 269;
+    const lata473 = Math.round(totalCervejas / 0.473);
+    const lata350 = Math.round(totalCervejas / 0.350);
+    const lata269 = Math.round(totalCervejas / 0.269);
     const totalRefrigerantes = (numCriancas + (totalAdultos - adultosQueBebem)) * 0.5;
 
 // Calculo para quantidade total de carnes (bovino, frango e linguiça)
@@ -58,7 +58,7 @@ function calcularChurrasco() {
       <p>Carne Bovina: ${(totalCarneHomens + totalCarneMulheres + totalCarneCriancas).toFixed(3)}Kg</p>
       <p>Frango: ${(totalFrangoHomens + totalFrangoMulheres + totalFrangoCriancas).toFixed(3)}Kg</p>
       <p>Linguiça: ${(totalLinguicaHomens + totalLinguicaMulheres + totalLinguicaCriancas).toFixed(3)}Kg</p>
-      <p>Carvão: ${carvao}g</p>
+      <p>Carvão: ${carvao}Kg</p>
       <p>Cerveja: ${totalCervejas}L<br />
       ${lata473} Latas de 473ml<br />
       ${lata350} Latas de 350ml<br />
