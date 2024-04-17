@@ -11,14 +11,14 @@ function calcularChurrasco() {
     
     const totalAdultos = numHomens + numMulheres;
 // Medida de quantidade de cada tipo de carne por genero 
-    const carneHomem = 300;
-    const carneMulher = 200;
+    const carneHomem = 0.3;
+    const carneMulher = 0.2;
 
-    const frangoHomem = 100;
-    const frangoMulher = 100;
+    const frangoHomem = 0.1;
+    const frangoMulher = 0.1;
 
-    const linguiçaHomem = 100;
-    const linguiçaMulher = 100;
+    const linguiçaHomem = 0.1;
+    const linguiçaMulher = 0.1;
 // Calculo para carne bovina
     const totalCarneHomens = numHomens * carneHomem;
     const totalCarneMulheres = numMulheres * carneMulher;
@@ -33,7 +33,7 @@ function calcularChurrasco() {
     const totalLinguicaCriancas = numCriancas * linguiçaMulher;
 // calculo para bebidas
     const totalCervejas = adultosQueBebem * 5;
-    const totalRefrigerantes = (numCriancas + (totalAdultos - adultosQueBebem)) * 500;
+    const totalRefrigerantes = (numCriancas + (totalAdultos - adultosQueBebem)) * 0.5;
 // Calculo para quantidade total de carnes (bovino, frango e linguiça)
     const totalCarnes = totalCarneHomens + totalCarneMulheres + totalCarneCriancas +
     totalFrangoHomens + totalFrangoMulheres + totalFrangoCriancas +
