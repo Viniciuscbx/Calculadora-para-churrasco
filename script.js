@@ -37,9 +37,9 @@ function calcularChurrasco() {
 
 // calculo para bebidas
     const totalCervejas = adultosQueBebem * 1.750;
-    const lata473 = Math.round(totalCervejas / 0.473);
-    const lata350 = Math.round(totalCervejas / 0.350);
-    const lata269 = Math.round(totalCervejas / 0.269);
+    const lata473 = totalCervejas / 0.473;
+    const lata350 = totalCervejas / 0.350;
+    const lata269 = totalCervejas / 0.269;
     const totalRefrigerantes = (numCriancas + (totalAdultos - adultosQueBebem)) * 0.5;
 
 // Calculo para quantidade total de carnes (bovino, frango e linguiça)
