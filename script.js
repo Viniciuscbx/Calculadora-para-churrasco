@@ -46,12 +46,12 @@ function calcularChurrasco() {
   
     const resultado = `
       <h2>Quantidade para Comprar:</h2>
-      <p>Carne Bovina: ${totalCarneHomens + totalCarneMulheres + totalCarneCriancas}g</p>
-      <p>Frango: ${totalFrangoHomens + totalFrangoMulheres + totalFrangoCriancas}g</p>
-      <p>Linguiça: ${totalLinguicaHomens + totalLinguicaMulheres + totalLinguicaCriancas}g</p>
-      <p>Carvão: ${carvao}g</p>
+      <p>Carne Bovina: ${totalCarneHomens + totalCarneMulheres + totalCarneCriancas}Kg</p>
+      <p>Frango: ${totalFrangoHomens + totalFrangoMulheres + totalFrangoCriancas}Kg</p>
+      <p>Linguiça: ${totalLinguicaHomens + totalLinguicaMulheres + totalLinguicaCriancas}Kg</p>
+      <p>Carvão: ${carvao}Kg</p>
       <p>Cerveja: ${totalCervejas} latas de 350ml</p>
-      <p>Refrigerante/ Suco: ${totalRefrigerantes}ml</p>
+      <p>Refrigerante/ Suco: ${totalRefrigerantes}L</p>
     `;
   
     document.getElementById('resultado').innerHTML = resultado;
