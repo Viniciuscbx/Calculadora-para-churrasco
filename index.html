@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Churrasco</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Calculadora de Churrasco</h1>
+    <div>
+      <label for="numHomens">Número de Homens:</label>
+      <input type="number" id="numHomens">
+    </div>
+    <div>
+      <label for="numMulheres">Número de Mulheres:</label>
+      <input type="number" id="numMulheres">
+    </div>
+    <div>
+      <label for="numCriancas">Número de Crianças:</label>
+      <input type="number" id="numCriancas">
+    </div>
+    <div>
+      <label for="adultosQueBebem">Quantos adultos Bebem bebida alcoólica?:</label>
+      <input type="number" id="adultosQueBebem">
+    </div>
+    <button onclick="calcularChurrasco()">Calcular</button>
+    <div id="resultado"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
