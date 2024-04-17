@@ -19,25 +19,34 @@ function calcularChurrasco() {
 
     const linguiçaHomem = 0.1;
     const linguiçaMulher = 0.1;
+
 // Calculo para carne bovina
     const totalCarneHomens = numHomens * carneHomem;
     const totalCarneMulheres = numMulheres * carneMulher;
     const totalCarneCriancas = numCriancas * carneMulher;
+
 // Calculo para frango
     const totalFrangoHomens = numHomens * frangoHomem;
     const totalFrangoMulheres = numMulheres * frangoMulher;
     const totalFrangoCriancas = numCriancas * frangoMulher;
+
 // Calculo para linguiça
     const totalLinguicaHomens = numHomens * linguiçaHomem;
     const totalLinguicaMulheres = numMulheres * linguiçaMulher;
     const totalLinguicaCriancas = numCriancas * linguiçaMulher;
+
 // calculo para bebidas
-    const totalCervejas = adultosQueBebem * 5;
+    const totalCervejas = adultosQueBebem * 1.750;
+    const lata473 = totalCervejas / 473;
+    const lata350 = totalCervejas / 350;
+    const lata269 = totalCervejas / 269;
     const totalRefrigerantes = (numCriancas + (totalAdultos - adultosQueBebem)) * 0.5;
+
 // Calculo para quantidade total de carnes (bovino, frango e linguiça)
     const totalCarnes = totalCarneHomens + totalCarneMulheres + totalCarneCriancas +
     totalFrangoHomens + totalFrangoMulheres + totalFrangoCriancas +
     totalLinguicaHomens + totalLinguicaMulheres + totalLinguicaCriancas;
+
 // Calculo para quantidade de carvão
     const carvao = (totalCarneHomens + totalCarneMulheres + totalCarneCriancas +
     totalFrangoHomens + totalFrangoMulheres + totalFrangoCriancas +
@@ -49,8 +58,11 @@ function calcularChurrasco() {
       <p>Carne Bovina: ${totalCarneHomens + totalCarneMulheres + totalCarneCriancas}Kg</p>
       <p>Frango: ${totalFrangoHomens + totalFrangoMulheres + totalFrangoCriancas}Kg</p>
       <p>Linguiça: ${totalLinguicaHomens + totalLinguicaMulheres + totalLinguicaCriancas}Kg</p>
-      <p>Carvão: ${carvao}Kg</p>
-      <p>Cerveja: ${totalCervejas} latas de 350ml</p>
+      <p>Carvão: ${carvao}g</p>
+      <p>Cerveja: ${totalCervejas}L<br />
+      ${lata473} Latas de 473ml<br />
+      ${lata350} Latas de 350ml<br />
+      ${lata269} Latas de 269ml</p>
       <p>Refrigerante/ Suco: ${totalRefrigerantes}L</p>
     `;
   
