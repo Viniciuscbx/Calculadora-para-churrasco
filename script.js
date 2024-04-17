@@ -48,9 +48,9 @@ function calcularChurrasco() {
     totalLinguicaHomens + totalLinguicaMulheres + totalLinguicaCriancas;
 
 // Calculo para quantidade de carvão
-    const carvao = (totalCarneHomens + totalCarneMulheres + totalCarneCriancas +
+    const carvao = ((totalCarneHomens + totalCarneMulheres + totalCarneCriancas +
     totalFrangoHomens + totalFrangoMulheres + totalFrangoCriancas +
-    totalLinguicaHomens + totalLinguicaMulheres + totalLinguicaCriancas).toFixed(3) * 1.5;
+    totalLinguicaHomens + totalLinguicaMulheres + totalLinguicaCriancas) * 1.5).toFixed(3);
   
   
     const resultado = `
