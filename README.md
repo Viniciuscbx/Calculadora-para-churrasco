@@ -1,0 +1,3 @@
+Sou amante de churrascos e todos que me conhecem deixam para mim a responsabilidade de calcular a quantidade de carnes de um churrasco.
+Por isso resolvi fazer um codigo simples para que meus amigos possam calcular os itens necessários.
+Espero que aproveitem...
