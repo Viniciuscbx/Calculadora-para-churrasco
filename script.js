@@ -21,9 +21,9 @@ function calcularChurrasco() {
     const linguiçaMulher = 0.1;
 
 // Calculo para carne bovina
-    const totalCarneHomens = numHomens * carneHomem;
-    const totalCarneMulheres = numMulheres * carneMulher;
-    const totalCarneCriancas = numCriancas * carneMulher;
+    const totalCarneHomens = (numHomens * carneHomem).toFixed(3);
+    const totalCarneMulheres = (numMulheres * carneMulher).toFixed(3);
+    const totalCarneCriancas = (numCriancas * carneMulher).toFixed(3);
 
 // Calculo para frango
     const totalFrangoHomens = numHomens * frangoHomem;
