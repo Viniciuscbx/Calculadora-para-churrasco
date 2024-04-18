@@ -3,66 +3,66 @@ function calcularChurrasco() {
     const numMulheres = parseInt(document.getElementById('numMulheres').value) || 0;
     const numCriancas = parseInt(document.getElementById('numCriancas').value) || 0;
     const adultosQueBebem = parseInt(document.getElementById('adultosQueBebem').value) || 0;
-
-    if (adultosQueBebem > numHomens + numMulheres) {
-        alert("O número de adultos não pode ultrapassar a soma do número de homens e mulheres.");
-        return;
-      }
-    
-    const totalAdultos = numHomens + numMulheres;
-// Medida de quantidade de cada tipo de carne por genero 
-    const carneHomem = 0.3;
-    const carneMulher = 0.2;
-
-    const frangoHomem = 0.1;
-    const frangoMulher = 0.1;
-
-    const linguiçaHomem = 0.1;
-    const linguiçaMulher = 0.1;
-
-// Calculo para carne bovina
-    const totalCarneHomens = numHomens * carneHomem;
-    const totalCarneMulheres = numMulheres * carneMulher;
-    const totalCarneCriancas = numCriancas * carneMulher;
-
-// Calculo para frango
-    const totalFrangoHomens = numHomens * frangoHomem;
-    const totalFrangoMulheres = numMulheres * frangoMulher;
-    const totalFrangoCriancas = numCriancas * frangoMulher;
-
-// Calculo para linguiça
-    const totalLinguicaHomens = numHomens * linguiçaHomem;
-    const totalLinguicaMulheres = numMulheres * linguiçaMulher;
-    const totalLinguicaCriancas = numCriancas * linguiçaMulher;
-
-// calculo para bebidas
-    const totalCervejas = adultosQueBebem * 1.750;
-    const lata473 = totalCervejas / 473;
-    const lata350 = totalCervejas / 350;
-    const lata269 = totalCervejas / 269;
-    const totalRefrigerantes = (numCriancas + (totalAdultos - adultosQueBebem)) * 0.5;
-
-// Calculo para quantidade total de carnes (bovino, frango e linguiça)
-    const totalCarnes = totalCarneHomens + totalCarneMulheres + totalCarneCriancas +
-    totalFrangoHomens + totalFrangoMulheres + totalFrangoCriancas +
-    totalLinguicaHomens + totalLinguicaMulheres + totalLinguicaCriancas;
-
-// Calculo para quantidade de carvão
-    const carvao = (totalCarneHomens + totalCarneMulheres + totalCarneCriancas +
-    totalFrangoHomens + totalFrangoMulheres + totalFrangoCriancas +
-    totalLinguicaHomens + totalLinguicaMulheres + totalLinguicaCriancas) * 1.5;
   
+    if (adultosQueBebem > numHomens + numMulheres) {
+      alert("O número de adultos não pode ultrapassar a soma do número de homens e mulheres.");
+      return;
+    }
+  
+    const totalAdultos = numHomens + numMulheres;
+  
+    // Medida de quantidade de cada tipo de carne por genero 
+    const carneHomem = 400;
+    const carneMulher = 300;
+  
+    const frangoHomem = 200;
+    const frangoMulher = 200;
+  
+    const linguiçaHomem = 200;
+    const linguiçaMulher = 200;
+  
+    // Calculo para carne bovina
+    const totalCarneHomens = (numHomens * carneHomem);
+    const totalCarneMulheres = (numMulheres * carneMulher);
+    const totalCarneCriancas = (numCriancas * carneMulher);
+  
+    // Calculo para frango
+    const totalFrangoHomens = (numHomens * frangoHomem);
+    const totalFrangoMulheres = (numMulheres * frangoMulher);
+    const totalFrangoCriancas = (numCriancas * frangoMulher);
+  
+    // Calculo para linguiça
+    const totalLinguicaHomens = (numHomens * linguiçaHomem);
+    const totalLinguicaMulheres = (numMulheres * linguiçaMulher);
+    const totalLinguicaCriancas = (numCriancas * linguiçaMulher);
+  
+    // Calculo para bebidas
+    const totalCervejas = adultosQueBebem * 6;
+    const totalCervejasLitros = (totalCervejas * 350) / 1000;
+    const totalRefrigerantes = (numCriancas + (totalAdultos - adultosQueBebem));
+  
+    // Calculo para quantidade total de carnes (bovino, frango e linguiça)
+    const totalCarnes = (
+      parseFloat(totalCarneHomens) + parseFloat(totalCarneMulheres) + parseFloat(totalCarneCriancas) +
+      parseFloat(totalFrangoHomens) + parseFloat(totalFrangoMulheres) + parseFloat(totalFrangoCriancas) +
+      parseFloat(totalLinguicaHomens) + parseFloat(totalLinguicaMulheres) + parseFloat(totalLinguicaCriancas)
+    );
+  
+    // Calculo para quantidade de carvão
+    const carvao = (
+      parseFloat(totalCarneHomens) + parseFloat(totalCarneMulheres) + parseFloat(totalCarneCriancas) +
+      parseFloat(totalFrangoHomens) + parseFloat(totalFrangoMulheres) + parseFloat(totalFrangoCriancas) +
+      parseFloat(totalLinguicaHomens) + parseFloat(totalLinguicaMulheres) + parseFloat(totalLinguicaCriancas)
+    ) * 1.5;
   
     const resultado = `
       <h2>Quantidade para Comprar:</h2>
-      <p>Carne Bovina: ${(totalCarneHomens + totalCarneMulheres + totalCarneCriancas).toFixed(3)}Kg</p>
-      <p>Frango: ${totalFrangoHomens + totalFrangoMulheres + totalFrangoCriancas}Kg</p>
-      <p>Linguiça: ${totalLinguicaHomens + totalLinguicaMulheres + totalLinguicaCriancas}Kg</p>
-      <p>Carvão: ${carvao}g</p>
-      <p>Cerveja: ${totalCervejas}L<br />
-      ${lata473} Latas de 473ml<br />
-      ${lata350} Latas de 350ml<br />
-      ${lata269} Latas de 269ml</p>
+      <h3> ${totalAdultos} adultos e ${numCriancas} crianças. ${totalAdultos + numCriancas} pessoas</h3>
+      <p>Carne Bovina: ${(totalCarneHomens + totalCarneMulheres + totalCarneCriancas) / 1000}Kg</p>
+      <p>Frango: ${(totalFrangoHomens + totalFrangoMulheres + totalLinguicaCriancas) / 1000}Kg</p>
+      <p>Linguiça: ${(totalLinguicaHomens + totalFrangoMulheres + totalLinguicaCriancas) / 1000}kg</p>
+      <p>Carvão: ${carvao / 1000}Kg</p>
+      <p>Cerveja: ${totalCervejas} Latas de 350ml = ${totalCervejasLitros}L</p>
       <p>Refrigerante/ Suco: ${totalRefrigerantes}L</p>
     `;
   
