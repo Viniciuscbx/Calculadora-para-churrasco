@@ -35,6 +35,13 @@ function calcularChurrasco() {
     const totalLinguicaHomens = (numHomens * linguiçaHomem);
     const totalLinguicaMulheres = (numMulheres * linguiçaMulher);
     const totalLinguicaCriancas = (numCriancas * linguiçaMulher);
+
+    // Calculo para os acompanhamentos
+    const totalArroz = (totalAdultos * 90) / 1000;
+    const totalBatata = (totalAdultos * 50) / 1000;
+    const totalCenoura = (totalAdultos * 50) / 1000;
+    const totalMaionese =  (totalAdultos * 50) / 1000;
+    const totalPaoDeAlho = totalAdultos + numCriancas;
   
     // Calculo para bebidas
     const totalCervejas = adultosQueBebem * 6;
@@ -56,12 +63,18 @@ function calcularChurrasco() {
     ) * 1.5;
   
     const resultado = `
-      <h2>Quantidade para Comprar:</h2>
-      <h3> ${totalAdultos} adultos e ${numCriancas} crianças. ${totalAdultos + numCriancas} pessoas</h3>
+      <h2>Quantidade para comprar para:</h2>
+      <h3> ${totalAdultos} adultos e ${numCriancas} crianças. ${totalAdultos + numCriancas} pessoas.</h3>
+      <h4>Carnes.</h4>
       <p>Carne Bovina: ${(totalCarneHomens + totalCarneMulheres + totalCarneCriancas) / 1000}Kg</p>
       <p>Frango: ${(totalFrangoHomens + totalFrangoMulheres + totalLinguicaCriancas) / 1000}Kg</p>
       <p>Linguiça: ${(totalLinguicaHomens + totalFrangoMulheres + totalLinguicaCriancas) / 1000}kg</p>
       <p>Carvão: ${carvao / 1000}Kg</p>
+      <h4>Acompanhamentos:</h4>
+      <p>Arroz: ${totalArroz}Kg</p>
+      <p>Maionese: ${totalBatata}Kg de batatas, ${totalCenoura}Kg de cenouras e ${totalMaionese}Kg de maionese de sua preferência.</p>
+      <p>Pão de alho: ${totalPaoDeAlho} unidades</p>
+      <h4>Bebidas.</h4>
       <p>Cerveja: ${totalCervejas} Latas de 350ml = ${totalCervejasLitros}L</p>
       <p>Refrigerante/ Suco: ${totalRefrigerantes}L</p>
     `;
