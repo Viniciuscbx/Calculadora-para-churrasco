@@ -2,9 +2,9 @@
 Bem-vindo à Calculadora de Churrasco! Este aplicativo foi desenvolvido para facilitar o planejamento de churrascos, ajudando a calcular a quantidade necessária de carnes, bebidas e acompanhamentos com base no número de convidados.
 
 ## Funcionalidades
-- **Cálculo de Carnes: Informe o número de adultos e crianças, e a calculadora irá sugerir quantos quilos de diferentes tipos de carne serão necessários.
-- **Bebidas: Sugestões de quantidade de bebidas alcoólicas e não alcoólicas com base no número de convidados.
-- **Acompanhamentos: Oferece estimativas de quantidades de maionese, pães e outros acompanhamentos, adaptadas ao tamanho do grupo.
+- **Cálculo de Carnes:** Informe o número de adultos e crianças, e a calculadora irá sugerir quantos quilos de diferentes tipos de carne serão necessários.
+- **Bebidas:** Sugestões de quantidade de bebidas alcoólicas e não alcoólicas com base no número de convidados.
+- **Acompanhamentos:** Oferece estimativas de quantidades de maionese, pães e outros acompanhamentos, adaptadas ao tamanho do grupo.
 
 ##Como usar
 1. Abra o aplicativo.
